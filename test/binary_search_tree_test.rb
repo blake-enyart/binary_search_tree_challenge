@@ -11,13 +11,18 @@ class BinarySearchTreeTest < Minitest::Test
     assert_instance_of BinarySearchTree, @tree
   end
 
+  def test_attr_return_correctly
+
+    assert_nil @tree.root
+  end
+
   def test_insert_method_behaves_correctly
     actual = @tree.insert(61, "Bill & Ted's Excellent Adventure")
 
     assert_equal 0, actual
 
     actual = @tree.insert(16, "Johnny English")
-    
+
     assert_equal 1, actual
 
     actual = @tree.insert(92, "Sharknado 3")
